@@ -1,6 +1,5 @@
 package com.sictel.gestion.fianza.consola.config;
 
-import java.io.File;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -18,10 +17,6 @@ import com.sictel.gestion.fianza.business.service.PreRegistroService;
 public class GestionFianzaMain implements CommandLineRunner {
 
 	private static final Logger log = LoggerFactory.getLogger(GestionFianzaMain.class);
-	private static final String RUTA_CARPE = "//resources//";
-	private static final Integer RUTA_INDEX = 0;
-	private static final String FILE_LECTURA = "archivo.csv";
-	private static final String FILE_ESCRITU = "archivo_result.csv";
 
 	@Autowired
 	PreRegistroService preRegistroService;

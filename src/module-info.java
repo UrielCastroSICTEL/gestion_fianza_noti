@@ -24,6 +24,7 @@ module gestion_fianza_noti {
 	requires java.instrument;
 	requires java.sql.rowset;
 	requires ews.java.api;
+	requires jasypt;
 
 	opens com.sictel.gestion.fianza.consola.config to spring.core, spring.beans, spring.context, resources;
 	opens com.sictel.gestion.fianza.business.repository to spring.core, spring.beans, spring.context;

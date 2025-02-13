@@ -4,6 +4,8 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.jasypt.iv.RandomIvGenerator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -26,7 +28,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 		"com.sictel.gestion.fianza.business.repository" })
 @PropertySource("classpath:config_gestion_fianza_noti_con.properties")
 public class ConfigSpringDataJpa {
-
+	
 	@Value("${hibernate.pakage.scan}")
 	String hibernate_pakage_scan;
 
@@ -45,11 +47,12 @@ public class ConfigSpringDataJpa {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		StandardPBEStringEncryptor standardPBEStringEncryptor = standardPBEStringEncryptor();
 
 		dataSource.setDriverClassName(jdbc_driver_class_name);
-		dataSource.setUrl(jdbc_url);
-		dataSource.setUsername(jdbc_username);
-		dataSource.setPassword(jdbc_password);
+		dataSource.setUrl(standardPBEStringEncryptor.decrypt(jdbc_url));
+		dataSource.setUsername(standardPBEStringEncryptor.decrypt(jdbc_username));
+		dataSource.setPassword(standardPBEStringEncryptor.decrypt(jdbc_password));
 		dataSource.setConnectionProperties(additionalProperties());
 
 		return dataSource;
@@ -87,6 +90,15 @@ public class ConfigSpringDataJpa {
 		properties.setProperty("connection.pool_size", "10");
 
 		return properties;
+	}
+
+	@Bean
+	public StandardPBEStringEncryptor standardPBEStringEncryptor() {
+		StandardPBEStringEncryptor standardPBEStringEncryptor = new StandardPBEStringEncryptor();
+		standardPBEStringEncryptor.setAlgorithm("PBEWithMD5AndDES");
+		standardPBEStringEncryptor.setPassword("$2a$10$thxzJeYp71DVDlekURxgCOrsDf.w2Ktg8ohdVJYdtyIU7kcQRoH3m");
+		standardPBEStringEncryptor.setIvGenerator(new RandomIvGenerator());
+		return standardPBEStringEncryptor;
 	}
 
 }

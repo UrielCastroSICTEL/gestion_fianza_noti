@@ -5,12 +5,12 @@
 	<groupId>com.sictel</groupId>
 	<artifactId>gestion.fianza.noti</artifactId>
 	<version>0.0.1</version>
-	<name>gestion fianza notificacion</name>
+	<name>Gestion fianza notificacion</name>
 	<description>Sistema de notificación, en el sistema de gestion de fianzas</description>
 
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src/main</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -27,32 +27,37 @@
 
 
 		<!-- [INI] LOG4J -->
-		<!-- <dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.24.3</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.24.3</version>
-		</dependency> -->
+		</dependency>
 		<!-- [FIN] LOG4J -->
 
 
-		<!-- [INI] SPRING JPA-->
+		<!-- [INI] SPRING JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 			<version>3.4.1</version>
-			<!--<exclusions>
+			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
 				</exclusion>
-			</exclusions>-->
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>3.4.1</version>
 		</dependency>
-		<!-- [FIN] CAPA DE DATOS-->
+		<!-- [FIN] SPRING JPA -->
 
 
 		<!-- [INI] CAPA DE DATOS-->
@@ -79,10 +84,9 @@
 			<artifactId>jaxws-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-		<!--                      -->
+		<!--                      -->		
 
-
-		<!--           ENCRYTION       -->	
+		<!--           ENCRYTION       -->
 		<dependency>
 			<groupId>org.jasypt</groupId>
 			<artifactId>jasypt</artifactId>

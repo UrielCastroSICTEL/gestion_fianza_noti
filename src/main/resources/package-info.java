@@ -4,4 +4,4 @@
 /**
  * 
  */
-package main.resources; 
+package resources; 

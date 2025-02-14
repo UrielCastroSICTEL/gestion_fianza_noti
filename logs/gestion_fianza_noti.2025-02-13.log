@@ -1,0 +1,39 @@
+2025-02-13 18:26:09 INFO     -- :: [FIA_NOTI] [INICIANDO... ] Iniciando... 
+2025-02-13 18:26:09 INFO Starting GestionFianzaMain using Java 20.0.2 with PID 2080 (C:\Users\c547sic\OneDrive\Escritorio\SICTEL_WS\SICTEL_PRO\proy_gestion_fianza\ws\gestion_fianza_no\target\classes started by C547SIC in C:\Users\c547sic\OneDrive\Escritorio\SICTEL_WS\SICTEL_PRO\proy_gestion_fianza\ws\gestion_fianza_no)
+2025-02-13 18:26:09 INFO No active profile set, falling back to 1 default profile: "default"
+2025-02-13 18:26:10 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-13 18:26:10 INFO Finished Spring Data repository scanning in 144 ms. Found 8 JPA repository interfaces.
+2025-02-13 18:26:10 WARN Bean 'configSpringDataJpa' of type [com.sictel.gestion.fianza.consola.config.ConfigSpringDataJpa$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [exceptionTranslation] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-13 18:26:11 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-13 18:26:11 INFO HHH000412: Hibernate ORM core version [WORKING]
+2025-02-13 18:26:11 INFO HHH000026: Second-level cache disabled
+2025-02-13 18:26:12 INFO No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-13 18:26:12 INFO HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@26f46fa6']
+	Database driver: undefined/unknown
+	Database version: 15.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-13 18:26:13 INFO HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-13 18:26:13 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-13 18:26:14 INFO Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-13 18:26:15 INFO Started GestionFianzaMain in 5.846 seconds (process running for 6.726)
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [INICIADO...  ] Se inició
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [CONSULTA] El número de pre - registros 2
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/SICZ-BAJIO/VO/2025] Fecha registro [2025-02-10]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/SICZ-BAJIO/VO/2025] No. notificaciones [1]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/SICZ-BAJIO/VO/2025] Dias desde registro [3]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/SICZ-BAJIO/VO/2025] Semanas desde registro [0]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/SICZ-BAJIO/VO/2025] Tipo de correo [NOTI_1S]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [EMAIL] NO SE ENVIA CORREO
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/TEC-LOPEZ/CU/2025] Fecha registro [2025-02-05]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/TEC-LOPEZ/CU/2025] No. notificaciones [1]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/TEC-LOPEZ/CU/2025] Dias desde registro [8]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/TEC-LOPEZ/CU/2025] Semanas desde registro [1]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [PRE_REG] [0000/TEC-LOPEZ/CU/2025] Tipo de correo [NOTI_2S]
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [EMAIL] NO SE ENVIA CORREO
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [TERMINANDO...] Terminando... 
+2025-02-13 18:26:15 INFO     -- :: [FIA_NOTI] [TERMINADO... ] Se terminó
+2025-02-13 18:26:15 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
